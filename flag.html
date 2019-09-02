@@ -1,51 +1,173 @@
 ---
-layout: page
-title: "Flags"
-description: "I am Egbert!"
-header-img: "img/about-bg.jpg"
-multilingual: true
+title: Flags
+layout: default
+description: keep hungry keep foolish
+header-img: "img/tag-bg.jpg"
 ---
 
-<!-- Language Selector -->
-<select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select>
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
-</div>
-
-<!-- English Version -->
-<div class="en post-container">
-    {% capture about_en %}{% include about/en.md %}{% endcapture %}
-    {{ about_en | markdownify }}
-</div>
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading" id="tag-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                </div>
+            </div>
+        </div>
     </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+            <!-- 标签云 -->
+			<div id='tag_cloud' class="tags">
+                {% for tag in site.tags %}
+             
+                {%  if tag[0] == 2018 %} 
+                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+                {% endif %} 
+
+                {%  if tag[0] == 2019 %} 
+                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+                {% endif %} 
+
+                {%  if tag[0] == 2020 %} 
+                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+                {% endif %} 
+                
+				{% endfor %}
+			</div>
+
+            <!--<blockquote class="tag-comments">
+                标签命名规范：
+                    <li>行业观察、职位、公司优先使用中文</li>
+                    <li>外国产品、术语优先使用英文</li>
+            </blockquote>-->
+
+            <!-- 标签列表 -->
+            {% for tag in site.tags %}
+
+             <!-------------------------------- 2020 ---------------------------------------->
+             {%  if tag[0] == 2020 %} 
+             <div class="one-tag-list">
+                   <span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+                     <span class="tag-text">{{ tag[0] }}</span>
+                 </span>
+ 
+                <div class="zh post-container">
+ 
+                         <!--copied from markdown -->
+                         <blockquote><p>从 莫斯科 回到改回的地方，<br>
+                            然后，重新开始。</p></blockquote>
+                                         
+                </div>
+                     
+               
+             </div>
+             {% endif %} 
+
+             
+            <!-------------------------------- 2019 ---------------------------------------->
+            {%  if tag[0] == 2019 %} 
+			<div class="one-tag-list">
+			  	<span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+                    <span class="tag-text">{{ tag[0] }}</span>
+                </span>
+
+                <div class="zh post-container">
+                    {% capture about_zh %}{% include posts/2019-flag/zh.md %}{% endcapture %}
+                    {{ about_zh | markdownify }}
+                </div>
+
+
+			    {% for post in tag[1] %}
+				      <!-- <li class="listing-item">
+				      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+				      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				      </li> -->
+				     <div class="post-preview">
+				       <a href="{{ post.url | prepend: site.baseurl }}">
+				          <h2 class="post-title">
+                             {{ post.title }}
+				              </h2>
+				              {% if post.subtitle %}
+				            <h3 class="post-subtitle">
+				               {{ post.subtitle }}
+				           </h3>
+				            {% endif %}
+				     </a>
+				     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+				     </div>
+			    	<hr>
+                 {% endfor %}
+              
+
+            </div>
+            {% endif %} 
+
+            <!-------------------------------- 2018 ---------------------------------------->
+            {%  if tag[0] == 2018 %} 
+			<div class="one-tag-list">
+			  	<span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+                    <span class="tag-text">{{ tag[0] }}</span>
+                </span>
+
+                <div class="zh post-container">
+
+                        <!--copied from markdown -->
+                        <blockquote><p>敢问路在何方？<br>
+                            路在脚下</p></blockquote>
+                    
+                        <h5>关于博主</h5>
+                        <li>昵称：灵翼（Egbert）</li>
+                        <li>生日：1993年6月12日</li>
+                        <li>星座：双子座</li>
+                        <li>职业：工程师，非程序员，没有大家认同的程序员特质。</li>
+                        <li>志向：这个世界因为我来过而变得不一样。</li>
+                        <li>家庭：底层平民，有一个可爱的妹妹，以及一个乖巧的女朋友。</li>
+                        <li>兴趣：有时间就出去走走，到世界的各个角落看看。偶尔文艺一下。喜欢看历史人文记录片。喜欢在超大屏幕上看电影，喜欢听经典怀旧的音乐。</li>
+                
+                    
+                        <p></p>
+                        
+                    </div>
+                    
+			    	{% for post in tag[1] %}
+				      <!-- <li class="listing-item">
+				      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+				      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+				      </li> -->
+				     <div class="post-preview">
+				       <a href="{{ post.url | prepend: site.baseurl }}">
+				          <h2 class="post-title">
+                             {{ post.title }}
+				              </h2>
+				              {% if post.subtitle %}
+				            <h3 class="post-subtitle">
+				               {{ post.subtitle }}
+				           </h3>
+				            {% endif %}
+				     </a>
+				     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+				     </div>
+			    	<hr>
+                    {% endfor %}
+              
+                
+
+
+            </div>
+            {% endif %} 
+
+        
+
+			{% endfor %}
+
+		</div>
+	</div>
 </div>
-<!-- disqus 评论框 end -->
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}

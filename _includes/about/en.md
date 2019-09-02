@@ -6,7 +6,7 @@ I studied BA, Digital Media Art at [Communication University of China](https://e
 
 ##### My Information
 
-- __NickName:__Egbert
+- __NickName:__ Egbert
 - __Date of birth:__ June 12, 1993
 - __Constellation:__ Gemini
 - __Occupation:__ Engineer, not programmer, no recognized programmer.
