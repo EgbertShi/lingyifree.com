@@ -4,6 +4,7 @@
 
 I studied BA, Digital Media Art at [Communication University of China](https://en.wikipedia.org/wiki/Communication_University_of_China) and MS, Computer Science at [Rochester Institute of Technology](https://en.wikipedia.org/wiki/Rochester_Institute_of_Technology). -->
 
+![](/img/my-life-photo.jpg)
 ##### My Information
 
 - __NickName:__ Egbert
