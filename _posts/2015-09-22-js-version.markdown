@@ -7,8 +7,6 @@ author:     "Hux"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - Web
-    - JavaScript
-    - 译
 ---
 
 

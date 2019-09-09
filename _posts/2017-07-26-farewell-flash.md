@@ -7,7 +7,6 @@ header-img: "img/post-bg-farewell-flash.jpg"
 header-mask: 0.2
 tags:
   - Web
-  - Flash
 ---
 
 > 本文首发于我的知乎专栏 [The Little Programmer](https://zhuanlan.zhihu.com/p/28109200)，转载请保留链接 ;)

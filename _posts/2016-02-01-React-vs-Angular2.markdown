@@ -9,8 +9,6 @@ header-mask: 0.3
 catalog:    true
 tags:
   - Web
-  - JavaScript
-  - 译
 ---
 
 > 这篇文章转载自[我在知乎专栏「前端外刊评论」上发表的文章](http://zhuanlan.zhihu.com/FrontendMagazine/20549104)。

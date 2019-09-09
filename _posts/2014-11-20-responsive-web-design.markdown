@@ -5,7 +5,6 @@ date:       2014-11-20 12:00:00
 author:     "Hux"
 header-img: "img/post-bg-rwd.jpg"
 tags:
-    - 知乎
     - Web 
 ---
 

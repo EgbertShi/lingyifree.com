@@ -6,9 +6,7 @@ author: "Hux"
 header-img: "img/post-bg-halting.jpg"
 header-mask: 0.3
 tags:
-  - 知乎
-  - 计算机科学
-  - 计算理论
+  - IT笔记
 ---
 
 > 这篇文章转载自[我在知乎上的回答]( https://www.zhihu.com/question/20081359/answer/275107187)

@@ -6,8 +6,6 @@ header-style: text
 hidden: true
 tags:
   - 软件基础 SF
-  - Coq
-  - 笔记
 ---
 
 

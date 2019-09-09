@@ -7,9 +7,7 @@ header-img: "img/post-bg-infinity.jpg"
 header-mask: 0.3
 mathjax: true
 tags:
-  - 知乎
-  - 计算机科学
-  - 计算理论
+  - IT笔记
 ---
 
 > 这篇文章转载自[我在知乎上的回答](https://www.zhihu.com/question/51508063/answer/275401076)

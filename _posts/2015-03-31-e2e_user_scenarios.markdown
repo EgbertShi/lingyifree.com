@@ -7,7 +7,6 @@ header-img: "img/post-bg-e2e-ux.jpg"
 lang: en
 tags:
   - UX/UI
-  - 🇬🇧
 ---
 
 
