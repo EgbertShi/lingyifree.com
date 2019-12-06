@@ -1,7 +1,6 @@
 
 <h5>电影清单</h5>
-> 手动整理各个电影的列表
-![](/img/in-post/movie-list.png)
+<!-- ![](/img/in-post/movie-list.png) -->
 - [x] 肖申克的救赎
 - [x] 霸王别姬
 - [x] 这个杀手不太冷 
