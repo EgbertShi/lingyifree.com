@@ -1,4 +1,6 @@
 
+
+[![](/img/2019-memory.jpg)](https://www.egbertshi.com/egbert-life/#/)
 ## 2019年这一年
 
 ><p>2019，这一年于我相对于2018，略显一点平淡。
