@@ -1,12 +1,13 @@
 ---
 title: Flags
 layout: default
-description: "You have a dream, you got to protect it.<br/> <br/> 如果你有梦想，就要守护它。"
+description: "You have a dream, you got to protect it.<br /> <br /> 如果你有梦想，就要守护它。"
 header-img: "img/post-bg-universe.jpg"
 ---
 
 <!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header class="intro-header"
+    style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -21,27 +22,30 @@ header-img: "img/post-bg-universe.jpg"
 
 <!-- Main Content -->
 <div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
             <!-- 标签云 -->
-			<div id='tag_cloud' class="tags">
+            <div id='tag_cloud' class="tags">
                 {% for tag in site.tags %}
-             
-                {%  if tag[0] == '2018年' %} 
-                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-                {% endif %} 
 
-                {%  if tag[0] == '2019年' %} 
-                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-                {% endif %} 
+                {%  if tag[0] == '2018年' %}
+                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}"
+                    rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+                {% endif %}
 
-                {%  if tag[0] == '2020年' %} 
-                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-                {% endif %} 
-                
-				{% endfor %}
-			</div>
+                {%  if tag[0] == '2019年' %}
+                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}"
+                    rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+                {% endif %}
+
+                {%  if tag[0] == '2020年' %}
+                <a class="tag-button--all" href="#{{ tag[0] }}" title="{{ tag[0] }}"
+                    rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+                {% endif %}
+
+                {% endfor %}
+            </div>
 
             <!--<blockquote class="tag-comments">
                 标签命名规范：
@@ -52,30 +56,26 @@ header-img: "img/post-bg-universe.jpg"
             <!-- 标签列表 -->
             {% for tag in site.tags %}
 
-             <!-------------------------------- 2020 ---------------------------------------->
-             {%  if tag[0] == '2020年' %} 
-             <div class="one-tag-list">
-                   <span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
-                     <span class="tag-text">{{ tag[0] }}</span>
-                 </span>
- 
-                <div class="zh post-container">
- 
-                         <!--copied from markdown -->
-                         <blockquote><p>从 莫斯科 回到该回的地方，<br>
-                            然后，重新开始。</p></blockquote>
-                                         
-                </div>
-                     
-               
-             </div>
-             {% endif %} 
+            <!-------------------------------- 2020 ---------------------------------------->
+            {%  if tag[0] == '2020年' %}
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+                    <span class="tag-text">{{ tag[0] }}</span>
+                </span>
 
-             
+                <div class="zh post-container">
+                    {% capture about_zh %}{% include posts/2020-flag/zh.md %}{% endcapture %}
+                    {{ about_zh | markdownify }}
+                </div>
+
+            </div>
+            {% endif %}
+
+
             <!-------------------------------- 2019 ---------------------------------------->
-            {%  if tag[0] == '2019年' %} 
-			<div class="one-tag-list">
-			  	<span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+            {%  if tag[0] == '2019年' %}
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
                     <span class="tag-text">{{ tag[0] }}</span>
                 </span>
 
@@ -85,74 +85,74 @@ header-img: "img/post-bg-universe.jpg"
                 </div>
 
 
-			    {% for post in tag[1] %}
-				      <!-- <li class="listing-item">
+                {% for post in tag[1] %}
+                <!-- <li class="listing-item">
 				      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
 				      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 				      </li> -->
-				     <div class="post-preview">
-				       <a href="{{ post.url | prepend: site.baseurl }}">
-				          <h2 class="post-title">
-                             {{ post.title }}
-				              </h2>
-				              {% if post.subtitle %}
-				            <h3 class="post-subtitle">
-				               {{ post.subtitle }}
-				           </h3>
-				            {% endif %}
-				     </a>
-				     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-				     </div>
-			    	<hr>
-                 {% endfor %}
-              
+                <div class="post-preview">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title">
+                            {{ post.title }}
+                        </h2>
+                        {% if post.subtitle %}
+                        <h3 class="post-subtitle">
+                            {{ post.subtitle }}
+                        </h3>
+                        {% endif %}
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                {% endfor %}
+
 
             </div>
-            {% endif %} 
+            {% endif %}
 
             <!-------------------------------- 2018 ---------------------------------------->
-            {%  if tag[0] == '2018年' %} 
-			<div class="one-tag-list">
-			  	<span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
+            {%  if tag[0] == '2018年' %}
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="{{ tag[0] }}">
                     <span class="tag-text">{{ tag[0] }}</span>
                 </span>
 
                 <!-- <div class="zh post-container"> -->
-                    <!-- {% capture about_zh %}{% include posts/2019-flag/zh.md %}{% endcapture %} -->
-                    <!-- {{ about_zh | markdownify }} -->
+                <!-- {% capture about_zh %}{% include posts/2019-flag/zh.md %}{% endcapture %} -->
+                <!-- {{ about_zh | markdownify }} -->
                 <!-- </div> -->
-                    
-			    	{% for post in tag[1] %}
-				      <!-- <li class="listing-item">
+
+                {% for post in tag[1] %}
+                <!-- <li class="listing-item">
 				      <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
 				      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 				      </li> -->
-				     <div class="post-preview">
-				       <a href="{{ post.url | prepend: site.baseurl }}">
-				          <h2 class="post-title">
-                             {{ post.title }}
-				              </h2>
-				              {% if post.subtitle %}
-				            <h3 class="post-subtitle">
-				               {{ post.subtitle }}
-				           </h3>
-				            {% endif %}
-				     </a>
-				     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-				     </div>
-			    	<hr>
-                    {% endfor %}
-              
-                
+                <div class="post-preview">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title">
+                            {{ post.title }}
+                        </h2>
+                        {% if post.subtitle %}
+                        <h3 class="post-subtitle">
+                            {{ post.subtitle }}
+                        </h3>
+                        {% endif %}
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                {% endfor %}
+
+
 
 
             </div>
-            {% endif %} 
+            {% endif %}
 
-        
 
-			{% endfor %}
 
-		</div>
-	</div>
+            {% endfor %}
+
+        </div>
+    </div>
 </div>
