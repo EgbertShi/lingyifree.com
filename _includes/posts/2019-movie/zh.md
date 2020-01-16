@@ -1,7 +1,8 @@
 
 
 [![](/img/2019-memory.jpg)](https://www.egbertshi.com/egbert-life/#/)
-## 2019年这一年
+#### [点击进入 ⇨【2019图片和视频】](https://www.egbertshi.com/egbert-life/#/)
+## 2019这一年
 
 ><p>2019，这一年于我相对于2018，略显一点平淡。
 
