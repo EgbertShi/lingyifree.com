@@ -5,7 +5,7 @@ subtitle: "运用逻辑思维做事情"
 author: "Egbert"
 date:  2020-01-17
 tags:
-  - 随感
+  - 提效/方法
 ---
 
 
