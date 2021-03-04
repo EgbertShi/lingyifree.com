@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2020年年度总结"
+title: "2020年度总结"
 subtitle: "2020的回顾与2021的展望"
 author: "Egbert"
 date:  2021-03-04
